@@ -24,6 +24,7 @@ namespace Payment_Gateway.DAL.Context
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<Payout> Payouts { get; set; }
+        public DbSet<Merchant> Merchants { get; set; }
 
 
 

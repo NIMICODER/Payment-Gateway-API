@@ -82,6 +82,7 @@ namespace Payment_Gateway.API
 
             builder.Services.ConfigureServices();
 
+
             builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();

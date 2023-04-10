@@ -89,8 +89,12 @@ namespace Payment_Gateway.API.Extensions
            services.AddScoped<IUserServices, UserServices>();
            services.AddScoped<IAdminServices, AdminServices>();
            services.AddScoped<IAdminProfileServices, AdminProfileServices>();
+            services.AddScoped<IMerchantService, MerchantService>();
+
 
         }
+
+
 
     }
 }

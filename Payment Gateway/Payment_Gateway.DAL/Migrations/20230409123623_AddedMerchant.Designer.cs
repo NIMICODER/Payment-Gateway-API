@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Payment_Gateway.DAL.Context;
 
@@ -11,9 +12,11 @@ using Payment_Gateway.DAL.Context;
 namespace Payment_Gateway.DAL.Migrations
 {
     [DbContext(typeof(PaymentGatewayDbContext))]
-    partial class PaymentGatewayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230409123623_AddedMerchant")]
+    partial class AddedMerchant
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,24 +54,24 @@ namespace Payment_Gateway.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "96f5b50f-6e34-4a3b-b9d3-15b8567a9425",
-                            ConcurrencyStamp = "f24df38c-f03a-4163-9988-2448e666222c",
+                            Id = "97ea0489-f439-4469-942e-4c27746fef11",
+                            ConcurrencyStamp = "5867bfc5-6141-4743-9b21-99a618ab216b",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "24c0be07-b007-4cfb-a4d5-bb9b432aa376",
-                            ConcurrencyStamp = "d3901ecb-feff-43a0-affe-d771d4ac2d1b",
+                            Id = "cb7ea923-d8ff-4aa9-9242-2aabb70a74dd",
+                            ConcurrencyStamp = "ad45b24e-f024-41a8-9d2d-4e0f726ec7d3",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "948ea9b7-8d28-4f44-ba68-7e6d68f6569c",
-                            ConcurrencyStamp = "caa09044-1deb-41b6-81a3-71e2b14d3063",
-                            Name = "Merchant",
-                            NormalizedName = "MERCHANT"
+                            Id = "746b828a-360e-4c2c-9c03-a8bbbeecc3f1",
+                            ConcurrencyStamp = "c9156fd7-2efa-44ba-ae0a-b3734a68b941",
+                            Name = "ThirdParty",
+                            NormalizedName = "THIRDPARTY"
                         });
                 });
 
