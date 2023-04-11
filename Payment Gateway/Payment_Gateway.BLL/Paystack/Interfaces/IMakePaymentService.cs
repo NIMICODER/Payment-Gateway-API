@@ -11,7 +11,7 @@ namespace Payment_Gateway.BLL.Paystack.Interfaces
 {
     public interface IMakePaymentService
     {
-        TransactionInitializeResponse ProcessPayment(ProcessPaymentRequest paymentRequest);
+        Task<object> ProcessPayment(ProcessPaymentRequest paymentRequest);
         Task<bool> VerifyPayment();
     }
 }

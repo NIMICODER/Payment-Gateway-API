@@ -10,11 +10,11 @@ namespace Payment_Gateway.API.Controllers
 {
     [Route("PayGo/[controller]")]
     [ApiController]
-    public class PaymentController : Controller
+    public class PaymentProcessorController : Controller
     {
         IMakePaymentService _paymentService;
 
-        public PaymentController(IMakePaymentService paymentService)
+        public PaymentProcessorController(IMakePaymentService paymentService)
         {
             _paymentService = paymentService;
         }
